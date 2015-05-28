@@ -1,0 +1,34 @@
+<?xml version="1.0"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:amq="http://activemq.apache.org/schema/core"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd  
+    http://activemq.apache.org/schema/core  
+    http://activemq.apache.org/schema/core/activemq-core.xsd">  
+    
+    <broker xmlns="http://activemq.apache.org/schema/core" brokerName="localhost" dataDirectory="./data">  
+        <!-- The transport connectors ActiveMQ will listen to -->  
+        <transportConnectors>  
+            <transportConnector name="openwire" uri="tcp://localhost:61616"/>  
+        </transportConnectors>  
+    </broker>  
+    
+    
+    <!--
+        Enable web consoles, REST and Ajax APIs and demos ()
+        Take a look at ${ACTIVEMQ_HOME}/conf/jetty.xml for more details
+        
+        1.  Console can be access through http://localhost:8161/admin
+        2.  
+        
+        Reference:
+        1.  http://activemq.apache.org/xml-configuration.html
+        2.  http://activemq.2283324.n4.nabble.com/How-to-access-the-web-console-using-ActiveMQ-maven-plug-in-td4672441.html
+    -->
+
+    <!-- 
+    <import resource="apache-activemq-5.11-SNAPSHOT/conf/jetty.xml"/>
+    -->
+     
+</beans>  
